@@ -14,7 +14,8 @@ const projects = [
       "Secure data transaction system",
       "Real-time analytics dashboard"
     ],
-    isUnavailable: true
+    isUnavailable: true,
+    href: "/data-marketplace"
   },
   {
     title: "E-commerce Solution",
@@ -25,7 +26,8 @@ const projects = [
       "Next.js and Tailwind CSS frontend",
       "Stripe payment integration",
       "Real-time inventory management"
-    ]
+    ],
+    href: "/e-commerce"
   },
   {
     title: "Portfolio Website",
@@ -36,7 +38,8 @@ const projects = [
       "Built with Next.js and TypeScript",
       "Responsive design with Tailwind CSS",
       "Smooth animations and transitions"
-    ]
+    ],
+    href: "/portfolio"
   }
 ];
 

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect, useRef } from 'react';
 
 interface ProjectTeaserProps {
@@ -8,6 +9,7 @@ interface ProjectTeaserProps {
   type: 'video' | 'image';
   bulletPoints?: string[];
   isUnavailable?: boolean;
+  href: string;
 }
 
 export default function ProjectTeaser({ 
@@ -16,7 +18,8 @@ export default function ProjectTeaser({
   media, 
   type,
   bulletPoints = [],
-  isUnavailable = false
+  isUnavailable = false,
+  href
 }: ProjectTeaserProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -32,7 +35,8 @@ export default function ProjectTeaser({
   }, []);
 
   return (
-    <div 
+    <Link 
+      href={href}
       className={`group relative flex flex-col md:flex-row bg-secondary overflow-hidden ${isUnavailable ? '' : 'cursor-pointer'}`}
     >
       {/* Content Section */}
@@ -128,6 +132,6 @@ export default function ProjectTeaser({
           />
         )}
       </div>
-    </div>
+    </Link>
   );
 } 
