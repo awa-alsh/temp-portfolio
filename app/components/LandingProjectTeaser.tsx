@@ -8,8 +8,7 @@ interface Props {
 
 export default function LandingProjectTeaser({ title, description, isTouchDevice = false }: Props) {
   return (
-    <Link href="/">
-      <div 
+      <Link href="/"
         className={`group relative flex-1 bg-secondary/80 backdrop-blur-sm p-4 lg:p-6 space-y-3 cursor-pointer ${
           !isTouchDevice 
             ? 'transition-transform duration-300 opacity-85 transition-opacity hover:opacity-95'
@@ -32,7 +31,6 @@ export default function LandingProjectTeaser({ title, description, isTouchDevice
                             />
                           </svg>
 
-      </div>
-    </Link>
+      </Link>
   );
 } 

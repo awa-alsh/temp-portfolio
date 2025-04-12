@@ -56,7 +56,7 @@ export default function About() {
           <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-accent">
             <Image
               src="/Profile (1).pdf"
-              alt="Awab Alshami"
+              alt="Awab"
               fill
               className="object-cover"
             />
