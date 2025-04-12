@@ -33,8 +33,8 @@ export default function ClientLayout({
       {/* Back to Top Button */}
       <button
         onClick={scrollToTop}
-        className={`fixed right-4 bottom-4 z-20 p-3 bg-secondary/80 backdrop-blur-sm rounded-full text-accent transition-all duration-300 sm:hidden ${
-          showBackToTop ? 'opacity-80 translate-y-0' : 'opacity-0 translate-y-16'
+        className={`fixed right-4 bottom-4 z-20 p-3 bg-secondary shadow-xl rounded-full text-accent transition-all duration-300 sm:hidden ${
+          showBackToTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
         }`}
       >
         <svg
