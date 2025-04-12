@@ -18,7 +18,7 @@ export default function LandingProjectTeaser({ title, description, isTouchDevice
           <h3 className="text-lg lg:text-xl font-medium text-foreground w-[90%] max-w-[90%]]">{title}</h3>
           <p className="text-sm text-text-secondary">{description}</p>
           <svg
-                            className="absolute top-4 right-5 w-5 h-5 lg:w-6 lg:h-6 text-accent flex flex-grow group-hover:translate-x-1 transition-transform duration-300"
+                            className="absolute top-4 right-4 w-5 h-5 lg:w-6 lg:h-6 text-accent flex flex-grow"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"

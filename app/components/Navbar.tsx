@@ -74,16 +74,29 @@ export default function Navbar() {
           </div>
 
           {/* Mobile navigation */}
-          <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
-            <div className="px-2 pt-2 pb-3 space-y-1">
+          <div 
+            className={`md:hidden transform transition-all duration-300 ease-in-out overflow-hidden ${
+              isMenuOpen 
+                ? 'max-h-[500px] opacity-100 clip-path-slide-down' 
+                : 'max-h-0 opacity-0 clip-path-slide-up'
+            }`}
+            style={{
+              clipPath: isMenuOpen ? 'inset(0 0 0 0)' : 'inset(0 0 100% 0)'
+            }}
+          >
+            <div className={`px-2 pt-2 pb-3 space-y-1 transform transition-all duration-300 ease-in-out ${
+              isMenuOpen 
+                ? 'translate-y-0' 
+                : '-translate-y-full'
+            }`}>
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   href={item.path}
-                  className={`block px-3 py-2 rounded-md text-base font-medium ${
+                  className={`block px-3 py-2 rounded-md text-base font-medium transform transition-all duration-300 bg-transparent ${
                     (pathname === item.path || (item.path === '/' && pathname === ''))
-                      ? 'text-accent bg-accent/10'
-                      : 'text-text-secondary hover:text-foreground hover:bg-secondary'
+                      ? 'text-accent'
+                      : 'text-text-secondary hover:text-foreground'
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >

@@ -106,7 +106,7 @@ export default function Home() {
                           <Image src="logo_full_white.svg" width={0} height={0} className="w-28 h-28 m-auto" alt="UniStorage Logo" />
                         </div>
                         <svg
-                          className="absolute top-4 right-5 w-5 h-5 lg:w-6 lg:h-6 text-accent flex flex-grow"
+                          className="absolute top-4 right-4 w-5 h-5 lg:w-6 lg:h-6 text-accent flex flex-grow"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -123,7 +123,7 @@ export default function Home() {
                 </Link>
 
                 {/* Content - Mobile */}
-                <div className="sm:hidden bg-secondary/80 backdrop-blur-sm p-6 space-y-3 -mt-6 cursor-pointer">
+                <Link href="/" className="sm:hidden bg-secondary/80 backdrop-blur-sm p-6 space-y-3 -mt-6 cursor-pointer">
                   <div className="flex flex-col gap-3 items-start justify-between">
                     <h3 className="text-lg font-medium text-foreground">UniStorage</h3>
                     <p className="text-sm text-text-secondary">A cloud storage solution built for universities and educational institutions, featuring secure file sharing, automated backups, and seamless collaboration tools.</p>
@@ -141,7 +141,7 @@ export default function Home() {
                           />
                         </svg>
                   </div>
-                </div>
+                </Link>
 
               {/* Middle Column - Project Teasers */}
               <div className="flex flex-col gap-6 sm:gap-8 md:gap-12 lg:gap-12 h-auto">
