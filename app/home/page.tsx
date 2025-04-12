@@ -4,6 +4,7 @@ import { useRef, useEffect, useState } from 'react';
 import Image from 'next/image';
 import LandingButtonArrow from '../components/LandingButtonArrow';
 import LandingProjectTeaser from '../components/LandingProjectTeaser';
+import Link from 'next/link';
 
 export default function Home() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -86,65 +87,43 @@ export default function Home() {
 
             <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 md:gap-12 lg:gap-12">
               {/* Left Column - Image */}
-                <div className="relative h-full w-full aspect-square sm:h-auto overflow-hidden group">
-                  <video
-                    src="/unistorage3.mkv"
-                    width={0}
-                    height={0}
-                    className="relative object-cover w-full h-full opacity-80 sm:opacity-90 cursor-pointer"
-                    autoPlay
-                    muted
-                    loop
-                  />
-                  {/* Content Overlay - Desktop */}
-                  <div className="hidden sm:block absolute inset-0 bg-secondary/80 backdrop-blur-sm translate-y-full transition-transform duration-500 group-hover:translate-y-[0] cursor-pointer">
-                    <div className="p-6 space-y-3 w-full">
-                        <div className="flex flex-col gap-3 items-start justify-between">
-                          <h3 className="text-lg lg:text-xl font-medium text-foreground w-[90%] max-w-[90%]">UniStorage</h3>
-                          <p className="text-sm text-text-secondary">A cloud storage solution built for universities and educational institutions, featuring secure file sharing, automated backups, and seamless collaboration tools.</p>
-                          <Image src="logo_full_white.svg" width={0} height={0} className="w-28 h-28 m-auto" alt="UniStorage Logo" />
-                        </div>
-                        <svg
-                          className="absolute top-4 right-5 w-5 h-5 lg:w-6 lg:h-6 text-accent flex flex-grow"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={1}
-                            d="M14 5l7 7m0 0l-7 7m7-7H3"
-                          />
-                        </svg>
-                    </div>
+              <Link href="/" className="relative h-full w-full aspect-square sm:h-auto overflow-hidden group">
+                <video
+                  src="/unistorage3.mkv"
+                  width={0}
+                  height={0}
+                  className="relative object-cover w-full h-full opacity-80 sm:opacity-90 cursor-pointer"
+                  autoPlay
+                  muted
+                  loop
+                />
+                {/* Content Overlay - Desktop */}
+                <div className="block absolute inset-0 bg-secondary/80 backdrop-blur-sm translate-y-full transition-transform duration-500 group-hover:translate-y-[0] cursor-pointer">
+                  <div className="p-6 space-y-3 w-full">
+                      <div className="flex flex-col gap-3 items-start justify-between">
+                        <h3 className="text-lg lg:text-xl font-medium text-foreground w-[90%] max-w-[90%]">UniStorage</h3>
+                        <p className="text-sm text-text-secondary">A cloud storage solution built for universities and educational institutions, featuring secure file sharing, automated backups, and seamless collaboration tools.</p>
+                        <Image src="logo_full_white.svg" width={0} height={0} className="w-28 h-28 m-auto" alt="UniStorage Logo" />
+                      </div>
+                      <svg
+                        className="absolute top-4 right-5 w-5 h-5 lg:w-6 lg:h-6 text-accent flex flex-grow"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={1}
+                          d="M14 5l7 7m0 0l-7 7m7-7H3"
+                        />
+                      </svg>
                   </div>
                 </div>
-
-                {/* Content - Mobile */}
-                <div className="sm:hidden bg-secondary/80 backdrop-blur-sm p-6 space-y-3 -mt-6 cursor-pointer">
-                  <div className="flex flex-col gap-3 items-start justify-between">
-                    <h3 className="text-lg font-medium text-foreground">UniStorage</h3>
-                    <p className="text-sm text-text-secondary">A cloud storage solution built for universities and educational institutions, featuring secure file sharing, automated backups, and seamless collaboration tools.</p>
-                    <Image src="logo_full_white.svg" width={0} height={0} className="w-28 h-28 m-auto" alt="UniStorage Logo" />
-                    <svg
-                          className="absolute top-4 right-5 w-5 h-5 lg:w-6 lg:h-6 text-accent flex flex-grow"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={1}
-                            d="M14 5l7 7m0 0l-7 7m7-7H3"
-                          />
-                        </svg>
-                  </div>
-                </div>
-
+              </Link>
+              
               {/* Middle Column - Project Teasers */}
-              <div className="flex flex-col gap-6 sm:gap-8 md:gap-12 lg:gap-12 w-full">
+              <div className="flex flex-col gap-6 sm:gap-8 md:gap-12 lg:gap-12 h-full h-[100%]">
                 {projects.map((project, index) => (
                   <LandingProjectTeaser
                     key={index}
