@@ -95,3 +95,13 @@ body {
 .custom-style {
   transform: translateY(-100%) !important;
 }
+
+.video-container {
+  clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+@media (min-width: 768px) {
+  .video-container {
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}

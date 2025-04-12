@@ -70,7 +70,7 @@ export default function About() {
             {skills.map((skillGroup, index) => (
               <div 
                 key={index}
-                className="bg-secondary rounded-xl p-6 space-y-4"
+                className="bg-secondary p-6 space-y-4"
               >
                 <h3 className="text-xl font-semibold text-accent">{skillGroup.category}</h3>
                 <div className="flex flex-wrap gap-2">
