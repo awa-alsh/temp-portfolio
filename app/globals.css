@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ffffff;
+  --accent: #00ff9d;
+  --secondary: #1a1a1a;
+  --text-secondary: #888888;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-secondary: var(--secondary);
+  --color-text-secondary: var(--text-secondary);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', sans-serif;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.project-teaser {
+  transition: transform 0.3s ease;
+}
+
+.project-teaser:hover {
+  transform: scale(1.02);
+}
+
+.project-teaser video {
+  transition: all 0.3s ease;
+}
+
+.project-teaser:hover video {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.arrow-animation {
+  transition: transform 0.3s ease;
+}
+
+.group:hover .arrow-animation {
+  transform: translateX(10px);
+}
+
+.arrow-icon {
+	path:nth-child(2) {
+		d: path('M14.5 4H3.5H4');
+	}
+	
+	path {
+		transition: 0.25s ease;
+	}
+	
+	.group:hover & {
+		path:nth-child(1) {
+			d: path('M15 4H4V4');
+		}
+		
+		path:nth-child(2) {
+			d: path('M14.5 4H3.5H0');
+      stroke-width: 1.1px;
+			transform: translateX(4px);
+		}
+		
+		path:nth-child(3) {
+			transform: translateX(3px);
+		}
+	}
+}
+
+.custom-style {
+  transform: translateY(-100%) !important;
+}
