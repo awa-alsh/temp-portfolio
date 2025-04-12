@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar";
+import ClientLayout from "./client-layout";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Awab - Portfolio",
-  description: "Full Stack Developer specializing in modern web technologies",
+  title: "Awab's Portfolio",
+  description: "A showcase of my projects and professional journey in software development and design.",
 };
 
 export default function RootLayout({
@@ -18,10 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar />
-        <main>
+        <ClientLayout>
           {children}
-        </main>
+        </ClientLayout>
       </body>
     </html>
   );

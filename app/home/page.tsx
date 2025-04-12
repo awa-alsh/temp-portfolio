@@ -8,8 +8,7 @@ import Link from 'next/link';
 
 export default function Home() {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const [showBackToTop, setShowBackToTop] = useState(false);
+
   const [isTouchDevice, setIsTouchDevice] = useState(false);
 
   useEffect(() => {
@@ -32,21 +31,6 @@ export default function Home() {
     }
   }, []);
 
-  useEffect(() => {
-    const container = scrollContainerRef.current;
-    if (!container) return;
-
-    const handleScroll = () => {
-      setShowBackToTop(container.scrollTop > 100);
-    };
-
-    container.addEventListener('scroll', handleScroll);
-    return () => container.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const scrollToTop = () => {
-    scrollContainerRef.current?.scrollTo({ top: 0, behavior: 'smooth' });
-  };
 
   const projects = [
     {
@@ -79,7 +63,6 @@ export default function Home() {
 
       {/* Content */}
       <div 
-        ref={scrollContainerRef}
         className="relative z-10 min-h-screen flex py-6 sm:py-0 sm:items-center overflow-y-auto"
       >
         <div className="w-full max-w-7xl mx-auto p-6 sm:pb-8 md:pb-10 lg:pb-12 pt-20 sm:pt-28">
@@ -171,27 +154,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Back to Top Button */}
-      <button
-        onClick={scrollToTop}
-        className={`fixed right-4 bottom-4 z-20 p-3 bg-secondary/80 backdrop-blur-sm rounded-full text-accent transition-all duration-300 sm:hidden ${
-          showBackToTop ? 'opacity-80 translate-y-0' : 'opacity-0 translate-y-16'
-        }`}
-      >
-        <svg
-          className="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M5 10l7-7m0 0l7 7m-7-7v18"
-          />
-        </svg>
-      </button>
     </div>
   );
 } 
