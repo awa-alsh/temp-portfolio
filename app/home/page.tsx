@@ -60,9 +60,9 @@ export default function Home() {
   ];
 
   return (
-    <div className="fixed inset-0 overflow-hidden">
+    <div className="relative min-h-screen overflow-hidden">
       {/* Video Background */}
-      <div className="absolute inset-0">
+      <div className="fixed inset-0">
         <video
           ref={videoRef}
           className="w-full h-full object-cover"
@@ -80,10 +80,10 @@ export default function Home() {
       {/* Content */}
       <div 
         ref={scrollContainerRef}
-        className="absolute top-16 inset-0 z-10 flex py-6 sm:py-0 sm:items-center overflow-y-auto"
+        className="relative z-10 min-h-screen flex py-6 sm:py-0 sm:items-center overflow-y-auto"
       >
-        <div className="w-full max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12">
-          <div className="flex flex-col lg:flex-col xl:flex-row justify-center gap-6 sm:gap-8 md:gap-12 lg:gap-12">
+        <div className="w-full max-w-7xl mx-auto p-6 sm:pb-8 md:pb-10 lg:pb-12 pt-28">
+          <div className="flex flex-col lg:flex-col xl:flex-row justify-center gap-6 sm:gap-8 md:gap-12 lg:gap-12 -mt-4">
 
             <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 md:gap-12 lg:gap-12">
               {/* Left Column - Image */}

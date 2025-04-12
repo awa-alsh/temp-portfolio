@@ -81,8 +81,8 @@ const miniProjects = [
 
 export default function Projects() {
   return (
-    <div className="min-h-screen bg-background py-4 sm:py-6 lg:py-12">
-      <div className="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+    <div className="min-h-screen bg-background pb-4 sm:pb-6 lg:pb-12  pt-28 md:pt-34 lg:pt-38">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-4 mb-8 sm:mb-12 lg:mb-18">
           <h1 className="text-4xl font-bold tracking-tight text-foreground">Projects</h1>
           <p className="text-text-secondary text-lg">

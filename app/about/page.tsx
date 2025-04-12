@@ -20,7 +20,7 @@ export default function About() {
   ];
 
   return (
-    <div className="min-h-screen bg-background py-12">
+    <div className="min-h-screen bg-background pb-4 sm:pb-6 lg:pb-12 pt-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div className="flex flex-col md:flex-row gap-12 items-center mb-16">
