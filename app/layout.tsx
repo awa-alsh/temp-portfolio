@@ -12,11 +12,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
+      <head>
+        <meta httpEquiv="ScreenOrientation" content="autoRotate:disabled" />
+      </head>
       <body className={inter.className}>
         <Navbar />
         <main className="pt-16">

@@ -157,7 +157,7 @@ export default function Home() {
             </div>
 
             {/* Right Column - Navigation Buttons */}
-            <div className="flex flex-col sm:flex-row xl:flex-col sm:justify-center gap-6 sm:gap-20 md:gap-24 lg:gap-32 xl:gap-24 pb-16 sm:pb-0">
+            <div className="flex flex-col sm:flex-row xl:flex-col sm:justify-center gap-6 sm:gap-20 md:gap-24 lg:gap-48 xl:gap-12 pb-16 sm:pb-0">
               <LandingButtonArrow
                 href="/"
                 text="Go to Projects"

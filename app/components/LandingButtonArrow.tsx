@@ -11,10 +11,9 @@ export default function LandingButtonArrow({ href, text, smallText }: Props) {
     <Link 
       href={href}
       className="block lg:w-auto">
-      <button className="group p-0 xl:p-8 lg:w-auto text-accent transition-all opacity-80 transition-opacity hover:opacity-95 duration-300 flex items-center justify-center lg:justify-start space-x-6  pointer-events-auto cursor-pointer">
-        <span className="text-xl sm:text-2xl font-medium whitespace-nowrap mr-2 md:mr-4">
-          <span className="hidden sm:inline">{text}</span>
-          <span className="inline sm:hidden">{smallText}</span>
+      <button className="group p-0 xl:py-8 xl:pl-8 xl:pr-0 lg:w-auto text-accent transition-all opacity-80 transition-opacity hover:opacity-95 duration-300 flex items-center justify-center lg:justify-start space-x-6  pointer-events-auto cursor-pointer">
+        <span className="text-xl md:text-2xl font-medium whitespace-nowrap mr-2 md:mr-4">
+          {text}
         </span>
         <div className="flex-grow items-center justify-end min-w-[50px]">
           <svg width="24" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg" className="arrow-icon w-[40px] sm:w-[60px] h-auto">
