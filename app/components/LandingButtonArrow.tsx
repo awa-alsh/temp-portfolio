@@ -3,10 +3,9 @@ import Link from "next/link";
 interface Props {
   href: string;
   text: string;
-  smallText: string;
 }
 
-export default function LandingButtonArrow({ href, text, smallText }: Props) {
+export default function LandingButtonArrow({ href, text }: Props) {
   return (
     <Link 
       href={href}

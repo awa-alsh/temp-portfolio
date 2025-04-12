@@ -161,12 +161,10 @@ export default function Home() {
               <LandingButtonArrow
                 href="/"
                 text="Go to Projects"
-                smallText="Projects"
               />
               <LandingButtonArrow
                 href="/about"
                 text="Go to About Me"
-                smallText="About Me"
               />
             </div>
           </div>
