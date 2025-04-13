@@ -66,9 +66,8 @@ export default function Home() {
         className="relative z-10 min-h-screen flex py-6 sm:py-0 sm:items-center overflow-y-auto"
       >
         <div className="w-full max-w-7xl mx-auto p-6 sm:pb-8 md:pb-10 lg:pb-12 pt-20 sm:pt-28">
-          <div className="flex flex-col lg:flex-col xl:flex-row justify-center gap-6 sm:gap-8 md:gap-12 lg:gap-12 -mt-4">
-
-            <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 md:gap-12 lg:gap-12">
+          <div className="flex flex-col lg:flex-row justify-center gap-6 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12 -mt-4">
+            <div className="flex flex-col sm:flex-row  gap-6 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12">
               {/* Left Column - Image */}
                 <Link href="/" className="relative h-full w-full aspect-square sm:h-auto overflow-hidden group">
                   <video
@@ -127,7 +126,7 @@ export default function Home() {
                 </Link>
 
               {/* Middle Column - Project Teasers */}
-              <div className="flex flex-col gap-6 sm:gap-8 md:gap-12 lg:gap-12 h-auto">
+              <div className="flex flex-col  gap-6 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12 h-auto">
                 {projects.map((project, index) => (
                   <LandingProjectTeaser
                     key={index}
@@ -140,7 +139,7 @@ export default function Home() {
             </div>
 
             {/* Right Column - Navigation Buttons */}
-            <div className="flex flex-col sm:flex-row xl:flex-col sm:justify-center gap-6 sm:gap-20 md:gap-24 lg:gap-48 xl:gap-12 pb-16 sm:pb-0">
+            <div className="flex flex-col sm:flex-row lg:flex-col sm:justify-center gap-6 sm:gap-20 md:gap-24 lg:gap-20 xl:gap-12 pb-16 sm:pb-0">
               <LandingButtonArrow
                 href="/"
                 text="Go to Projects"
